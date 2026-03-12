@@ -2,95 +2,104 @@
 import { Question, Student } from './types';
 
 export const STUDENTS: Student[] = [
-  { id: 1, name: "Đinh Bá Tùng Anh" },
-  { id: 2, name: "Nguyễn Trâm Anh" },
-  { id: 3, name: "Nguyễn Tú Anh" },
-  { id: 4, name: "Vũ Việt Bách" },
-  { id: 5, name: "Lương Thanh Bình" },
-  { id: 6, name: "Nguyễn Đức Bình" },
-  { id: 7, name: "Dương Diệp Chi" },
-  { id: 8, name: "Nguyễn Quỳnh Chi" },
-  { id: 9, name: "Phạm Hà Chi" },
-  { id: 10, name: "Phạm Đức Dũng" },
-  { id: 11, name: "Ngô Thành Đạt" },
-  { id: 12, name: "Vũ Hồng Đăng" },
-  { id: 13, name: "Hoàng Gia Hân" },
-  { id: 14, name: "Nguyễn Trương Minh Huyền" },
-  { id: 15, name: "Đỗ Trần Lê Khang" },
-  { id: 16, name: "Nguyễn Đăng Khoa" },
-  { id: 17, name: "Trần Tiến Lâm" },
-  { id: 18, name: "Hoàng Khánh Linh" },
-  { id: 19, name: "Phạm Khánh Linh" },
-  { id: 20, name: "Trần Vũ Khánh Linh" },
-  { id: 21, name: "Triệu Tú Linh" },
-  { id: 22, name: "Diêm Khôi Minh" },
-  { id: 23, name: "Ngô Hoàng Nhật Minh" },
-  { id: 24, name: "Nguyễn Đức Minh" },
-  { id: 25, name: "Nguyễn Quang Minh" },
-  { id: 26, name: "Nguyễn Hà My" },
-  { id: 27, name: "Hoàng Trần Linh Nga" },
-  { id: 28, name: "Hoàng Khánh Ngọc" },
-  { id: 29, name: "Nguyễn Minh Ngọc" },
-  { id: 30, name: "Hoàng Nam Phong" },
-  { id: 31, name: "Đặng Xuân Phúc" },
-  { id: 32, name: "Lê Minh Phúc" },
-  { id: 33, name: "Trần Minh Phước" },
-  { id: 34, name: "Trần Ngọc Bảo Quốc" },
-  { id: 35, name: "Lê Công Thành" },
-  { id: 36, name: "Đặng Anh Thảo" },
-  { id: 37, name: "Lê Minh Thắng" },
-  { id: 38, name: "Hà Thanh Trúc" },
-  { id: 39, name: "Lê Minh Tú" },
-  { id: 40, name: "Nguyễn Khuê Tú" },
-  { id: 41, name: "Hoàng Minh Tuấn" },
-  { id: 42, name: "Lê Sơn Tùng" },
-  { id: 43, name: "Đồng Khánh Vy" },
-  { id: 44, name: "Nguyễn Phương Vy" },
-  { id: 45, name: "Phạm Quỳnh Vy" }
+  { id: 1, name: "Hoàng Lan Anh" },
+  { id: 2, name: "Nguyễn Duy Hoàng Anh" },
+  { id: 3, name: "Nguyễn Ngọc Anh" },
+  { id: 4, name: "Nguyễn Thị Hồng Anh" },
+  { id: 5, name: "Nguyễn Trâm Anh" },
+  { id: 6, name: "Đỗ Minh Ánh" },
+  { id: 7, name: "Đặng Đức Bảo" },
+  { id: 8, name: "Đỗ Băng Băng" },
+  { id: 9, name: "Nguyễn Mai Chi" },
+  { id: 10, name: "Hà Minh Đào" },
+  { id: 11, name: "Ngô Xuân Đạt" },
+  { id: 12, name: "Nguyễn Minh Đức" },
+  { id: 13, name: "Đoàn Hương Giang" },
+  { id: 14, name: "Hoàng Như Giang" },
+  { id: 15, name: "Hồ Ngọc Hà" },
+  { id: 16, name: "Trần Lê Hiếu" },
+  { id: 17, name: "Nguyễn Khánh Huyền" },
+  { id: 18, name: "Nguyễn Ngọc Huyền" },
+  { id: 19, name: "Quách Kim Khánh" },
+  { id: 20, name: "Hoàng Vũ Bảo Lam" },
+  { id: 21, name: "Hà Ngọc Lâm" },
+  { id: 22, name: "Đào Hà Linh" },
+  { id: 23, name: "Đinh Tô Phương Linh" },
+  { id: 24, name: "Lương Nhật Linh" },
+  { id: 25, name: "Nguyễn Khánh Linh" },
+  { id: 26, name: "Vũ Mai Linh" },
+  { id: 27, name: "Đinh Ngọc Mai" },
+  { id: 28, name: "Nguyễn Đức Mạnh" },
+  { id: 29, name: "Phạm Thị Thúy Nga" },
+  { id: 30, name: "Hà Đặng Ngân" },
+  { id: 31, name: "Đỗ Lê Hồng Ngọc" },
+  { id: 32, name: "Lâm Yến Nhi" },
+  { id: 33, name: "Đặng Mai Phương" },
+  { id: 34, name: "Chu Sỹ Tài" },
+  { id: 35, name: "Đào Đức Tâm" },
+  { id: 36, name: "Kim Ngọc Tâm" },
+  { id: 37, name: "Nguyễn Phương Thùy" },
+  { id: 38, name: "Hà Anh Thư" },
+  { id: 39, name: "Lê Quỳnh Trang" },
+  { id: 40, name: "Phạm Tố Uyên" },
+  { id: 41, name: "Nguyễn Khánh" },
+  { id: 42, name: "Vũ Thị Hải Yến" },
+  { id: 43, name: "Phạm Phương Anh" }
 ];
 
 export const QUESTIONS: Question[] = [
   {
     id: 1,
-    text: "Sau khi thay quần áo, việc làm đúng của bạn nhỏ là gì?",
+    text: "Nhận diện tình huống áp dụng quy tắc: Để đi từ Yên Bái đến Hà Nội, một người có thể chọn đi bằng xe khách (có 5 hãng xe khác nhau) hoặc đi bằng tàu hỏa (có 3 chuyến tàu khác nhau). Hỏi người đó có bao nhiêu cách để đi từ Yên Bái đến Hà Nội bằng một phương tiện duy nhất?",
     options: [
-      { key: "A", text: "Vứt quần áo ra ghế" },
-      { key: "B", text: "Để quần áo dưới sàn nhà" },
-      { key: "C", text: "Gấp quần áo gọn gàng và cất đúng chỗ" },
-      { key: "D", text: "Để mẹ dọn giúp" }
+      { key: "A", text: "15 cách." },
+      { key: "B", text: "2 cách." },
+      { key: "C", text: "8 cách." },
+      { key: "D", text: "5 cách." }
     ],
     correctAnswer: "C"
   },
   {
     id: 2,
-    text: "Thu dọn quần áo gọn gàng giúp chúng ta điều gì?",
+    text: "Lớp 10D6 có 9 nam và 33 bạn nữ, nhà trường cần chọn mỗi lớp một bạn đi dự trại hè của một trường bạn vào tháng 6 tới, có bao nhiêu cách chọn một bạn như vậy?",
     options: [
-      { key: "A", text: "Quần áo nhanh bị bẩn hơn" },
-      { key: "B", text: "Nhà cửa sạch sẽ, ngăn nắp" },
-      { key: "C", text: "Mất nhiều thời gian vui chơi" },
-      { key: "D", text: "Không cần giúp bố mẹ nữa" }
-    ],
-    correctAnswer: "B"
-  },
-  {
-    id: 3,
-    text: "Việc làm nào thể hiện em biết giúp đỡ bố mẹ hằng ngày?",
-    options: [
-      { key: "A", text: "Chơi xong để đồ chơi bừa bãi" },
-      { key: "B", text: "Thay quần áo xong bỏ lung tung" },
-      { key: "C", text: "Tự gấp quần áo của mình" },
-      { key: "D", text: "Không làm gì cả" }
+      { key: "A", text: "9 phương án." },
+      { key: "B", text: "33 phương án." },
+      { key: "C", text: "42 phương án." },
+      { key: "D", text: "1 phương án." }
     ],
     correctAnswer: "C"
   },
   {
-    id: 4,
-    text: "Khi quần áo bẩn, em nên làm gì?",
+    id: 3,
+    text: "Bài toán đếm số tự nhiên: Từ các chữ số {1, 2, 3, 4, 5}, có bao nhiêu cách chọn ra một chữ số là số lẻ hoặc là số 2?",
     options: [
-      { key: "A", text: "Cất chung với quần áo sạch" },
-      { key: "B", text: "Vứt ra sân" },
-      { key: "C", text: "Để trên bàn học" },
-      { key: "D", text: "Bỏ vào chỗ quy định để giặt" }
+      { key: "A", text: "3 cách." },
+      { key: "B", text: "4 cách." },
+      { key: "C", text: "5 cách." },
+      { key: "D", text: "2 cách." }
+    ],
+    correctAnswer: "B"
+  },
+  {
+    id: 4,
+    text: "Phân biệt điều kiện áp dụng Quy tắc cộng: Phát biểu nào sau đây là ĐÚNG về điều kiện áp dụng quy tắc cộng cho một công việc?",
+    options: [
+      { key: "A", text: "Công việc được chia thành các công đoạn nối tiếp nhau." },
+      { key: "B", text: "Các phương án thực hiện công việc có thể trùng lặp lẫn nhau." },
+      { key: "C", text: "Công việc được chia thành các phương án rời nhau, không phụ thuộc vào nhau." },
+      { key: "D", text: "Chỉ áp dụng được khi có đúng hai phương án thực hiện." }
+    ],
+    correctAnswer: "C"
+  },
+  {
+    id: 5,
+    text: "Bài toán thực tế tổng hợp (Cánh cửa tương lai): Bạn Nam chọn nguyện vọng 1 vào Đại học. Nhóm ngành C03 có 3 trường đại học xét tuyển, nhóm ngành D01 có 4 trường đại học xét tuyển (các trường ở hai nhóm này không trùng nhau). Ngoài ra, Nam còn cân nhắc thêm 2 trường thuộc khối D14( Toán, sử, Anh). Nếu chỉ được chọn một trường duy nhất, Nam có bao nhiêu cách chọn?",
+    options: [
+      { key: "A", text: "24 cách." },
+      { key: "B", text: "7 cách." },
+      { key: "C", text: "12 cách." },
+      { key: "D", text: "9 cách." }
     ],
     correctAnswer: "D"
   }
