@@ -64,7 +64,7 @@ const App: React.FC = () => {
           <Star className="text-yellow-500 fill-yellow-500" />
         </h1>
         <p className="text-xl font-bold text-orange-600 bg-white/50 inline-block px-4 py-1 rounded-full border-2 border-orange-200 shadow-sm">
-          Chào mừng các bạn học sinh lớp 10D6
+          Chào mừng các bạn học sinh lớp 4A
         </p>
       </header>
 

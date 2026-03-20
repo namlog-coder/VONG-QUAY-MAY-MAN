@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Question } from '../types';
+import 'katex/dist/katex.min.css';
+import { InlineMath } from 'react-katex';
 
 interface QuizProps {
   question: Question;
@@ -24,7 +26,23 @@ const Quiz: React.FC<QuizProps> = ({
           {question.id}
         </span>
         <h2 className="text-2xl font-bold text-blue-800 leading-tight">
-          {question.text}
+          {question.image ? (
+            <div className="flex flex-col gap-4">
+              <img 
+                src={question.image} 
+                alt="Câu hỏi" 
+                className="max-h-48 object-contain rounded-xl border-2 border-gray-100"
+                referrerPolicy="no-referrer"
+              />
+              {question.text && (
+                <span className="text-lg text-gray-600">
+                  {question.text.includes('\\frac') ? <InlineMath math={question.text} /> : question.text}
+                </span>
+              )}
+            </div>
+          ) : (
+            question.text.includes('\\frac') ? <InlineMath math={question.text} /> : question.text
+          )}
         </h2>
       </div>
 
@@ -53,7 +71,7 @@ const Quiz: React.FC<QuizProps> = ({
             }`}>
               {option.key}
             </span>
-            {option.text}
+            {option.text.includes('\\frac') ? <InlineMath math={option.text} /> : option.text}
           </button>
         ))}
       </div>

@@ -9,8 +9,22 @@ interface SpinWheelProps {
 
 const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [rotation, setRotation] = useState(0);
   const [targetRotation, setTargetRotation] = useState(0);
+
+  useEffect(() => {
+    // Initialize audio
+    audioRef.current = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3');
+    audioRef.current.loop = true;
+    
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
   
   const drawWheel = useCallback(() => {
     const canvas = canvasRef.current;
@@ -70,6 +84,12 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
 
   useEffect(() => {
     if (isSpinning) {
+      // Start music
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play().catch(e => console.log("Audio play failed:", e));
+      }
+
       const extraSpins = 5 + Math.random() * 5;
       const newRotation = targetRotation + (extraSpins * 2 * Math.PI);
       setTargetRotation(newRotation);
@@ -88,6 +108,11 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
           setRotation(currentRot);
           requestAnimationFrame(animate);
         } else {
+          // Stop music
+          if (audioRef.current) {
+            audioRef.current.pause();
+          }
+          
           setRotation(newRotation);
           // Calculate who won
           const sliceAngle = (2 * Math.PI) / STUDENTS.length;
