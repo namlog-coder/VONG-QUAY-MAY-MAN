@@ -16,7 +16,6 @@ export const STUDENTS: Student[] = [
   { id: 12, name: "Hồ Minh Đức" },
   { id: 13, name: "Trần Gia Huy" },
   { id: 14, name: "Nguyễn Trần Đăng Khôi" },
-  { id: 15, name: "Dương Ngọc Hữu Phúc" },
   { id: 16, name: "Nguyễn Phương Hà" },
   { id: 17, name: "Trịnh Đăng Khoa" },
   { id: 18, name: "Trần Phương Hằng" },
@@ -26,8 +25,7 @@ export const STUDENTS: Student[] = [
   { id: 22, name: "Vũ Minh Khôi" },
   { id: 23, name: "Vũ Hà Như Ngọc" },
   { id: 24, name: "Nguyễn Khánh An" },
-  { id: 25, name: "Nguyễn Tuệ Minh" },
-  { id: 26, name: "Hoàng Ngọc Thảo Vy" }
+  { id: 25, name: "Nguyễn Tuệ Minh" }
 ];
 
 export const QUESTIONS: Question[] = [
