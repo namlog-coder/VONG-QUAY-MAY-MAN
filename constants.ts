@@ -2,85 +2,89 @@
 import { Question, Student } from './types';
 
 export const STUDENTS: Student[] = [
-  { id: 1, name: "Thào Khánh Hưng" },
-  { id: 2, name: "Dương Thanh Bình" },
-  { id: 3, name: "Giàng Thị Hà" },
-  { id: 4, name: "Giàng Việt Thành" },
-  { id: 5, name: "Giàng A Tông" },
-  { id: 6, name: "Thào Thị Chù" },
-  { id: 7, name: "Thào Nhật Duy" },
-  { id: 8, name: "Thào A Sổ" },
-  { id: 9, name: "Thào Thị Trang" },
-  { id: 10, name: "Thào Thị Vy" },
-  { id: 11, name: "Vàng Thu Hàng" },
-  { id: 12, name: "Thào Thị Dông" },
-  { id: 13, name: "Giàng A Mảnh" },
-  { id: 14, name: "Giàng A Tủa" },
-  { id: 15, name: "Phàng A Tinh" },
-  { id: 16, name: "Nguyễn Quỳnh Anh" },
-  { id: 17, name: "Giàng Thị Linh" },
-  { id: 18, name: "Giàng Thị Sinh" },
-  { id: 19, name: "Giàng A Gừ" },
-  { id: 20, name: "Thào A Kiên" },
-  { id: 21, name: "Hảng Hằng Dông" },
-  { id: 22, name: "Giàng Thị Sầu" },
-  { id: 23, name: "Thào Nhà Chơ" },
-  { id: 24, name: "Vàng Thị Hường" },
-  { id: 25, name: "Giàng Việt Minh" },
-  { id: 26, name: "Mùa Chờ Giàng" },
-  { id: 27, name: "Lý Thị Hồng" },
-  { id: 28, name: "Mùa A Phong" },
-  { id: 29, name: "Sùng Thị Minh Gương" },
-  { id: 30, name: "Sùng A Hủ" },
-  { id: 31, name: "Sùng Thị Sầu" },
-  { id: 32, name: "Mùa A Vinh" },
-  { id: 33, name: "Giàng Thị Súa" }
+  { id: 1, name: "Lê Tuấn Vũ" },
+  { id: 2, name: "Hà Huyền My" },
+  { id: 3, name: "Nguyễn Lê Quỳnh Hương" },
+  { id: 4, name: "Trần Thanh Ngân" },
+  { id: 5, name: "Trần Bảo Anh" },
+  { id: 6, name: "Đào Thanh Hà" },
+  { id: 7, name: "Phí Minh Trí" },
+  { id: 8, name: "Nguyễn Hải Anh" },
+  { id: 9, name: "Lê Tấn Phong" },
+  { id: 10, name: "Nguyễn Bảo Trâm" },
+  { id: 11, name: "Phạm Minh Anh" },
+  { id: 12, name: "Hồ Minh Đức" },
+  { id: 13, name: "Trần Gia Huy" },
+  { id: 14, name: "Nguyễn Trần Đăng Khôi" },
+  { id: 15, name: "Dương Ngọc Hữu Phúc" },
+  { id: 16, name: "Nguyễn Phương Hà" },
+  { id: 17, name: "Trịnh Đăng Khoa" },
+  { id: 18, name: "Trần Phương Hằng" },
+  { id: 19, name: "Nguyễn Bảo Ngọc" },
+  { id: 20, name: "Vũ Việt Minh Khôi" },
+  { id: 21, name: "Nguyễn Kiều Trúc Linh" },
+  { id: 22, name: "Vũ Minh Khôi" },
+  { id: 23, name: "Vũ Hà Như Ngọc" },
+  { id: 24, name: "Nguyễn Khánh An" },
+  { id: 25, name: "Nguyễn Tuệ Minh" },
+  { id: 26, name: "Hoàng Ngọc Thảo Vy" }
 ];
 
 export const QUESTIONS: Question[] = [
   {
     id: 1,
-    text: "Tính: \\frac{3}{7} + \\frac{2}{7} = ?",
+    text: "Chú bé chăn cừu đã làm gì khiến mọi người tức giận?",
     options: [
-      { key: "A", text: "\\frac{5}{14}" },
-      { key: "B", text: "\\frac{5}{7}" },
-      { key: "C", text: "\\frac{1}{7}" },
-      { key: "D", text: "\\frac{6}{49}" }
+      { key: "A", text: "Chăn cừu rất chăm chỉ" },
+      { key: "B", text: "Nói dối có chó sói" },
+      { key: "C", text: "Giúp đỡ mọi người" },
+      { key: "D", text: "Ngủ quên khi chăn cừu" }
     ],
     correctAnswer: "B"
   },
   {
     id: 2,
-    text: "Tính: \\frac{5}{9} - \\frac{2}{9} = ?",
+    text: "Điều gì xảy ra khi chó sói thật sự xuất hiện?",
     options: [
-      { key: "A", text: "\\frac{7}{9}" },
-      { key: "B", text: "\\frac{8}{9}" },
-      { key: "C", text: "\\frac{2}{9}" },
-      { key: "D", text: "\\frac{3}{9}" }
+      { key: "A", text: "Các bác nông dân đến giúp ngay" },
+      { key: "B", text: "Không ai đến giúp" },
+      { key: "C", text: "Chó sói bỏ đi" },
+      { key: "D", text: "Chú bé chạy về nhà" }
     ],
-    correctAnswer: "D"
+    correctAnswer: "B"
   },
   {
     id: 3,
-    text: "Tính: \\frac{5}{6} + \\frac{4}{6} = ?",
+    text: "Câu chuyện muốn nhắc nhở chúng ta điều gì?",
     options: [
-      { key: "A", text: "\\frac{7}{6}" },
-      { key: "B", text: "\\frac{8}{6}" },
-      { key: "C", text: "\\frac{9}{6}" },
-      { key: "D", text: "\\frac{10}{9}" }
+      { key: "A", text: "Phải biết chào hỏi mọi người" },
+      { key: "B", text: "Không nên nói dối" },
+      { key: "C", text: "Phải chăn cừu giỏi" },
+      { key: "D", text: "Không nên thật thà quá" }
     ],
-    correctAnswer: "C"
+    correctAnswer: "B"
   },
   {
     id: 4,
-    text: "Tính: \\frac{6}{8} - \\frac{2}{8} = ?",
+    text: "Nếu em nói dối nhiều lần, điều gì có thể xảy ra với em?",
     options: [
-      { key: "A", text: "\\frac{7}{8}" },
-      { key: "B", text: "\\frac{4}{8}" },
-      { key: "C", text: "\\frac{2}{8}" },
-      { key: "D", text: "\\frac{2}{4}" }
+      { key: "A", text: "Mọi người sẽ tin em hơn" },
+      { key: "B", text: "Mọi người không còn tin em" },
+      { key: "C", text: "Em sẽ được khen" },
+      { key: "D", text: "Em vui hơn" }
     ],
     correctAnswer: "B"
+  },
+  {
+    id: 5,
+    text: "Trong cuộc sống hằng ngày, khi làm sai em nên làm gì?",
+    options: [
+      { key: "A", text: "Nói dối để không bị mắng" },
+      { key: "B", text: "Trốn tránh" },
+      { key: "C", text: "Thành thật xin lỗi và sửa lỗi" },
+      { key: "D", text: "Đổ lỗi cho người khác" }
+    ],
+    correctAnswer: "C"
   }
 ];
 

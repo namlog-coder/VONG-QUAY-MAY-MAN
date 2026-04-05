@@ -10,6 +10,9 @@ interface SpinWheelProps {
 const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const winAudioRef = useRef<HTMLAudioElement | null>(null);
+  const tickAudioRef = useRef<HTMLAudioElement | null>(null);
+  const lastSliceIndexRef = useRef<number>(-1);
   const [rotation, setRotation] = useState(0);
   const [targetRotation, setTargetRotation] = useState(0);
 
@@ -18,11 +21,14 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
     audioRef.current = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3');
     audioRef.current.loop = true;
     
+    winAudioRef.current = new Audio('https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3');
+    tickAudioRef.current = new Audio('https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3');
+    tickAudioRef.current.volume = 0.5;
+
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
+      if (audioRef.current) audioRef.current.pause();
+      if (winAudioRef.current) winAudioRef.current.pause();
+      if (tickAudioRef.current) tickAudioRef.current.pause();
     };
   }, []);
   
@@ -106,11 +112,29 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinEnd, isSpinning }) => {
           const easeOut = 1 - Math.pow(1 - progress, 3);
           const currentRot = rotation + (newRotation - rotation) * easeOut;
           setRotation(currentRot);
+
+          // Tick sound logic
+          const sliceAngle = (2 * Math.PI) / STUDENTS.length;
+          const currentSliceIndex = Math.floor(((2 * Math.PI - (currentRot % (2 * Math.PI))) % (2 * Math.PI)) / sliceAngle);
+          if (currentSliceIndex !== lastSliceIndexRef.current) {
+            if (tickAudioRef.current) {
+              tickAudioRef.current.currentTime = 0;
+              tickAudioRef.current.play().catch(() => {});
+            }
+            lastSliceIndexRef.current = currentSliceIndex;
+          }
+
           requestAnimationFrame(animate);
         } else {
           // Stop music
           if (audioRef.current) {
             audioRef.current.pause();
+          }
+          
+          // Play win sound
+          if (winAudioRef.current) {
+            winAudioRef.current.currentTime = 0;
+            winAudioRef.current.play().catch(() => {});
           }
           
           setRotation(newRotation);
