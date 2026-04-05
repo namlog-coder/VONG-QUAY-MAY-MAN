@@ -60,7 +60,7 @@ const App: React.FC = () => {
       <header className="mb-8 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-black text-blue-700 tracking-tight drop-shadow-md mb-2 flex items-center justify-center gap-4">
           <Star className="text-yellow-500 fill-yellow-500" />
-          VÒNG QUAY MAY MẮN
+          VÒNG QUAY KÌ DIỆU
           <Star className="text-yellow-500 fill-yellow-500" />
         </h1>
         <p className="text-xl font-bold text-orange-600 bg-white/50 inline-block px-4 py-1 rounded-full border-2 border-orange-200 shadow-sm">
