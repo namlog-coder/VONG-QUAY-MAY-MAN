@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import SpinWheel from './components/SpinWheel';
 import Quiz from './components/Quiz';
 import { QUESTIONS } from './constants';
@@ -12,6 +12,19 @@ const App: React.FC = () => {
   const [gameStatus, setGameStatus] = useState<GameStatus>('IDLE');
   const [userAnswer, setUserAnswer] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
+
+  const correctAudioRef = useRef<HTMLAudioElement | null>(null);
+  const failAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    correctAudioRef.current = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3');
+    failAudioRef.current = new Audio('https://assets.mixkit.co/active_storage/sfx/2017/2017-preview.mp3');
+
+    return () => {
+      if (correctAudioRef.current) correctAudioRef.current.pause();
+      if (failAudioRef.current) failAudioRef.current.pause();
+    };
+  }, []);
 
   const currentQuestion = QUESTIONS[currentQuestionIndex];
 
@@ -33,10 +46,24 @@ const App: React.FC = () => {
     setGameStatus('ANSWERING');
   };
 
+  const isCorrect = userAnswer === currentQuestion.correctAnswer;
+
   const handleCheckResult = () => {
     if (!userAnswer) return;
     setShowFeedback(true);
     setGameStatus('CHECKED');
+
+    if (isCorrect) {
+      if (correctAudioRef.current) {
+        correctAudioRef.current.currentTime = 0;
+        correctAudioRef.current.play().catch(e => console.log("Correct audio play failed:", e));
+      }
+    } else {
+      if (failAudioRef.current) {
+        failAudioRef.current.currentTime = 0;
+        failAudioRef.current.play().catch(e => console.log("Fail audio play failed:", e));
+      }
+    }
   };
 
   const handleNextTurn = () => {
@@ -47,8 +74,6 @@ const App: React.FC = () => {
     // Loop questions
     setCurrentQuestionIndex((prev) => (prev + 1) % QUESTIONS.length);
   };
-
-  const isCorrect = userAnswer === currentQuestion.correctAnswer;
 
   return (
     <div className="min-h-screen bg-[#fef9c3] p-4 md:p-8 flex flex-col items-center">
