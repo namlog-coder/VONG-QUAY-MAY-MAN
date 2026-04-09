@@ -33,43 +33,39 @@ export const QUESTIONS: Question[] = [
     id: 1,
     text: "Chú bé chăn cừu đã làm gì khiến mọi người tức giận?",
     options: [
-      { key: "A", text: "Chăn cừu rất chăm chỉ" },
-      { key: "B", text: "Nói dối có chó sói" },
-      { key: "C", text: "Giúp đỡ mọi người" },
-      { key: "D", text: "Ngủ quên khi chăn cừu" }
+      { key: "A", text: "Chú bé chăn cừu rất chăm chỉ." },
+      { key: "B", text: "Chú bé nói dối có chó sói." },
+      { key: "C", text: "Chú bé luôn giúp đỡ mọi người." }
     ],
     correctAnswer: "B"
   },
   {
     id: 2,
-    text: "Điều gì xảy ra khi chó sói thật sự xuất hiện?",
+    text: "Điều gì xảy ra khi sói đến thật?",
     options: [
-      { key: "A", text: "Các bác nông dân đến giúp ngay" },
-      { key: "B", text: "Không ai đến giúp" },
-      { key: "C", text: "Chó sói bỏ đi" },
-      { key: "D", text: "Chú bé chạy về nhà" }
+      { key: "A", text: "Khi sói đến thật các bác nông dân đến giúp ngay." },
+      { key: "B", text: "Khi sói đến thật chú bé bỏ chạy về nhà." },
+      { key: "C", text: "Khi sói đến thật không ai đến giúp chú bé." }
     ],
-    correctAnswer: "B"
+    correctAnswer: "C"
   },
   {
     id: 3,
     text: "Câu chuyện muốn nhắc nhở chúng ta điều gì?",
     options: [
-      { key: "A", text: "Phải biết chào hỏi mọi người" },
-      { key: "B", text: "Không nên nói dối" },
-      { key: "C", text: "Phải chăn cừu giỏi" },
-      { key: "D", text: "Không nên thật thà quá" }
+      { key: "A", text: "Chúng ta không nên nói dối." },
+      { key: "B", text: "Khi gặp người lớn chúng ta phải chào hỏi lễ phép." },
+      { key: "C", text: "Chúng ta phải chăn cừu giỏi." }
     ],
-    correctAnswer: "B"
+    correctAnswer: "A"
   },
   {
     id: 4,
     text: "Nếu em nói dối nhiều lần, điều gì có thể xảy ra với em?",
     options: [
-      { key: "A", text: "Mọi người sẽ tin em hơn" },
-      { key: "B", text: "Mọi người không còn tin em" },
-      { key: "C", text: "Em sẽ được khen" },
-      { key: "D", text: "Em vui hơn" }
+      { key: "A", text: "Mọi người sẽ tin em hơn." },
+      { key: "B", text: "Mọi người không còn tin tưởng em." },
+      { key: "C", text: "Em sẽ được khen." }
     ],
     correctAnswer: "B"
   },
@@ -77,10 +73,9 @@ export const QUESTIONS: Question[] = [
     id: 5,
     text: "Trong cuộc sống hằng ngày, khi làm sai em nên làm gì?",
     options: [
-      { key: "A", text: "Nói dối để không bị mắng" },
-      { key: "B", text: "Trốn tránh" },
-      { key: "C", text: "Thành thật xin lỗi và sửa lỗi" },
-      { key: "D", text: "Đổ lỗi cho người khác" }
+      { key: "A", text: "Khi làm sai em nói dối để không bị mắng." },
+      { key: "B", text: "Khi làm sai em trốn tránh, đổ lỗi cho người khác." },
+      { key: "C", text: "Khi làm sai em thành thật xin lỗi và sửa lỗi." }
     ],
     correctAnswer: "C"
   }
